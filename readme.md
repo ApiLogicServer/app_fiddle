@@ -4,9 +4,9 @@
 
 &nbsp;
 
-<summary>Welcome to this Tutorial: Flask/SQLAlchemy “Application Fiddle”</summary>
+<summary>Welcome to the Flask/SQLAlchemy “Application Fiddle”</summary>
 
-Use this Tutorial to learn Flask/SQLAlchemy, using running apps in Codespaces.  Think of this as an ***Application Fiddle:*** run the app, explore the code, alter it (e.g., create endpoints, issue queries), use the debugger, etc.
+Use this ***Application Fiddle*** to learn Flask/SQLAlchemy in Codespaces.  You have 3 running apps - execute them, explore the code, alter them (e.g., create endpoints, issue queries), use the debugger, etc.
 
 The Key Technology Concepts (at end) is an inventory of essential skills for creating Flask/SQLAlchemy systems.  Each are illustrated here.
 
