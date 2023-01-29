@@ -67,6 +67,7 @@ Frameworks are flexible, and leverage your existing dev environment (IDE, git, e
 <details markdown>
 
 
+
 <summary>2. API Logic Project: Instant, Open</summary>
 
 &nbsp;
