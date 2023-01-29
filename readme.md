@@ -66,8 +66,6 @@ Frameworks are flexible, and leverage your existing dev environment (IDE, git, e
 
 <details markdown>
 
-
-
 <summary>2. API Logic Project: Instant, Open</summary>
 
 &nbsp;
@@ -96,7 +94,7 @@ This application was created using the API Logic Server CLI (Command Language In
 ApiLogicServer create --project_name=ApiLogicProject --db_url=nw-  # use Northwind, no customizations
 ```
 
-Execute: **Run and Debug >> *2. API Logic Server: Instant, Open***, and then  **Ports > Admin App > globe**
+To execute (see below for details): start the server with **Run and Debug >> *2.API...***, and then start the Browser via **Ports > AdminApp > globe**
 
 &nbsp;
 
@@ -108,13 +106,21 @@ Execute: **Run and Debug >> *2. API Logic Server: Instant, Open***, and then  **
 
 To run the ApiLogicProject app:
 
-1. Click **Run and Debug**, select **2. API Logic Server: Instant, Open**, and click the green button to start the server
+1. Start the Server
 
-2. Click the **Ports** tab
+    1. Click **Run and Debug**
+    2. Use the dropdown to select **2. API Logic Server: Instant, Open**, and
+    3. Click the green button to start the server
+<br><br>
 
-3. Click the (top "Admin App" row) **globe** to start your Browser
+2. Start the Browser:
 
-    * Don't spend too much time exploring the app, we'll see a much better version in just a moment...
+
+    1. Click the **Ports** tab
+
+    3. Click the **globe** in the top "AdminApp" row
+
+Don't spend too much time exploring the app, we'll see a much better version in just a moment...
 
 
 <figure><img src="https://github.com/valhuber/apilogicserver/wiki/images/tutorial/2-apilogicproject.png?raw=true"></figure>
