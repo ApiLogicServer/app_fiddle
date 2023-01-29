@@ -94,7 +94,7 @@ This application was created using the API Logic Server CLI (Command Language In
 ApiLogicServer create --project_name=ApiLogicProject --db_url=nw-  # use Northwind, no customizations
 ```
 
-To execute (see below for details): start the server with **Run and Debug >> *2.API...***, and then start the Browser via **Ports > AdminApp > globe**
+To execute (see *Show me how*, below, for details): start the server with **Run and Debug >> *2.API...***, and then start the Browser via **Ports > AdminApp > globe**
 
 &nbsp;
 
@@ -106,7 +106,7 @@ To execute (see below for details): start the server with **Run and Debug >> *2.
 
 To run the ApiLogicProject app:
 
-1. Start the Server
+1. Start the Server:
 
     1. Click **Run and Debug**
     2. Use the dropdown to select **2. API Logic Server: Instant, Open**, and
@@ -170,7 +170,7 @@ This application is a clone of the prior example, customized in VSCode:
 
 * **User Interface:** the app now has help text that walks you through the key features
 
-You can run the app.  First, stop the server using the red "stop" button).  Then, restart with the same procedure as Step 2, above, choosing ***3. API Logic Project: Logic***.  Observe the customizations:
+You can run the app.  First, stop the server using the red "stop" button).  Then, restart with the same procedure as Step 2, above, but choose Run Configuration ***3. API Logic Project: Logic***.  Observe the customizations:
 
 1. Click Category - you need to **login** now (user u1, password p).  That's because authentication has been activated.
 
