@@ -199,7 +199,7 @@ As shown above, it's easy to create projects with a single command.  To help you
 cd app_fiddle
 ApiLogicServer create --project_name=todo --db_url=todo
 ```
-You can also try these other examples (be sure to `cd tutorial`; use the name below for both the _project_name_ and the _db_url_):
+You can also try these other examples (be sure to `cd app_fiddle`; use the name below for both the _project_name_ and the _db_url_):
 
 * **chinook** - albums and artists
 * **classicmodels** - customers and orders
