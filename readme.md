@@ -205,6 +205,9 @@ As shown above, it's easy to create projects with a single command.  To help you
 cd /workspaces/app_fiddle
 ApiLogicServer create --project_name=todo --db_url=todo
 ```
+
+Then, run the server as above, using the Run Configuration for `Execute ToDo`.
+
 You can also try these other examples (be sure to `cd /workspaces/app_fiddle`; use the name below for both the _project_name_ and the _db_url_):
 
 * **chinook** - albums and artists
