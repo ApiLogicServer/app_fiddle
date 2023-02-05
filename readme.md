@@ -12,7 +12,7 @@ Use this ***Application Fiddle*** to learn Flask/SQLAlchemy in Codespaces.  You 
 
 The Key Technology Concepts (at end) is an inventory of essential skills for creating Flask/SQLAlchemy systems.  Each are illustrated here.
 
-These projects all use the [Northwind Sample Database](https://valhuber.github.io/ApiLogicServer/Sample-Database/).  Other databases are also provided in Next Steps.
+These projects all use the [Northwind Sample Database](https://apilogicserver.github.io/Docs/Sample-Database/).  Other databases are also provided in Next Steps.
 
 Start with the first application - a Basic Flask/SQLAlchemy App.
 
@@ -94,7 +94,7 @@ This application was created using the API Logic Server CLI (Command Language In
 ApiLogicServer create --project_name=ApiLogicProject --db_url=nw-  # use Northwind, no customizations
 ```
 
-To execute (see *Show me how*, below, for details): start the server with **Run and Debug >> *2.API...***, and then start the Browser via **Ports > AdminApp > globe**
+To execute (see *Show me how*, below, for details): start the server with **Run and Debug >> *2.API...***, and then start the Browser at localhost:5656
 
 &nbsp;
 
@@ -113,12 +113,7 @@ To run the ApiLogicProject app:
     3. Click the green button to start the server
 <br><br>
 
-2. Start the Browser:
-
-
-    1. Click the **Ports** tab
-
-    3. Click the **globe** in the top "AdminApp" row
+2. Start the Browser at localhost:5656
 
 Don't spend too much time exploring the app, we'll see a much better version in just a moment...
 

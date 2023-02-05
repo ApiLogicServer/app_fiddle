@@ -1,10 +1,10 @@
 about:
-  date: January 30, 2023 15:36:43
+  date: February 05, 2023 12:56:38
   recent_changes: works with modified safrs-react-admin
   version: 0.0.0
 api_root: '{http_type}://{swagger_host}:{port}/{api}'
 authentication:
-  endpoint: '{http_type}://{swagger_host}:{port}/auth/login'
+  endpoint: '{http_type}://{swagger_host}:{port}/api/auth/login'
 info:
   number_relationships: 13
   number_tables: 17
