@@ -4,7 +4,7 @@
 
 &nbsp;
 
-<summary>Welcome to the Flask/SQLAlchemy “App Fiddle”</summary>
+<summary>Welcome to the Flask/SQLAlchemy "App Fiddle"</summary>
 
 You've perhaps used JS Fiddle to explore JavaScript and HTML.  With the power of Codespaces, we can now provide a "fiddle" for a *complete application.*
 
@@ -30,7 +30,7 @@ Then, discover **API Logic Server** - an Open Source CLI to create executable pr
 
 This illustrates a typical framework-based approach for creating projects - a minimal project for seeing core Flask and SQLAlchemy services in action.
 
-Execute using the Run and Debug (*1. Basic App: Flask / SQLAlchemy*), and test with `cURL`.  The relevant code is `api/end_points.py`.
+Execute using the Run and Debug (*1. Basic App: Flask / SQLAlchemy*), and test with `cURL`.  The relevant code is `1. Basic_App/api/end_points.py`.
 
 <details markdown>
 
@@ -90,7 +90,7 @@ The *API Logic Project* app provides an alternative, creating an entire project 
 
   * **Open Technology:** using standard IDEs such as VSCode or PyCharm.  All of the key technology concepts you mastered above (Flask, SQLAlchemy) still fully apply.
 
-This application was created using the API Logic Server CLI (Command Language Interface), with 1 command:
+This application was *not coded* - **it was created** using the API Logic Server CLI (Command Language Interface), with 1 command (don't do this now - it's already been done):
 
 ```bash
 ApiLogicServer create --project_name=ApiLogicProject --db_url=nw-  # use Northwind, no customizations
@@ -125,7 +125,7 @@ Don't spend too much time exploring the app, we'll see a much better version in 
 
 &nbsp;
 
-> Key Takeway: you will achieve this level of schema-driven automation for your own databases on initial creation. 
+> Key Takeway: you will achieve this level automation for your projects: provide a database, get an instant API and Admin App.  Then, customize in your IDE. 
 
 &nbsp;
 
@@ -171,7 +171,7 @@ You can run the app.
 1. **Stop the server** using the red "stop" button).
 2. **Restart the server** with the same procedure as Step 2, above, but choose Run Configuration ***3. API Logic Project: Logic***.  
 
-Observe the customizations:
+Observe the customizations in `3. ApiLogicProject_Logic`:
 
 1. Click Category - you need to **login** now (user u1, password p).  That's because authentication has been activated.
 
@@ -181,11 +181,11 @@ Observe the customizations:
 
 4. Our Delete Order test adjusts the customer balance, since we how have **business logic** in ```ApiLogicProject_Logic/logic/declare_logic.py```
 
-You can use VSCode to *diff* these from their originals in the *ApiLogicProject*.
+You can use VSCode to *diff* these from their originals in the `2. ApiLogicProject`.
 
 &nbsp;
 
-> **Key Take-aways** <br>1. **Instant** project creation<br>2. Spreadsheet-like **Rules**<br>3. Fully Customizable in **your IDE**.
+> **Key Take-aways** <br>1. **Instant** project creation<br>2. Spreadsheet-like **Rules**<br>3. Fully Customizable in ***your* IDE**.
 
 
 </details>
