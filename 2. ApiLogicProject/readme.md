@@ -44,8 +44,8 @@ python api_logic_server_run.py
 
 | About                    | Info                               |
 |:-------------------------|:-----------------------------------|
-| Created                  | February 09, 2023 07:24:51                      |
-| API Logic Server Version | 07.00.58           |
+| Created                  | February 14, 2023 08:42:59                      |
+| API Logic Server Version | 07.00.76           |
 | Created in directory     | /Users/val/dev/Org-ApiLogicServer/app_fiddle/2. ApiLogicProject |
 | API Name                 | api          |
 
