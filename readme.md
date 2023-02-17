@@ -96,7 +96,7 @@ This application was *not coded* - **it was created** using the API Logic Server
 ApiLogicServer create --project_name=ApiLogicProject --db_url=nw-  # use Northwind, no customizations
 ```
 
-To execute (see *Show me how*, below, for details): **restart the server** with **Run and Debug >> *2.API...***, and then start the Browser at localhost:5656 **(url in the console log)**
+To execute (see *Show me how*, below, for details): **restart the server** with **Run and Debug >> *2. API Logic Server: Instant, Open***, and then start the Browser at localhost:5656 **(url in the console log)**
 
 &nbsp;
 
@@ -135,7 +135,7 @@ An instant Admin App and API are a great start, but there are some significant s
 
 * **No logic -** multi-table derivations and constraints for save logic
 
-    * For example, open **Customers**, **double-click first Order**, and **delete the first Order**.  Re-click Customer from the left nav menu - it should have reduced the customer's balance from 2102, but it's unchanged.   That's because there is *no logic...*
+    * For example, open **Customer** (left nav menu), **click `ALFKI`**, and **EDIT > DELETE the first Order**.  Re-click Customer from the left nav menu - it should have reduced the customer's balance from 2102, but it's unchanged.   That's because there is *no logic...*
 
 Let's see how these are addressed, in the next section.
 
@@ -166,7 +166,7 @@ A unique feature of API Logic Server is provision for:
 
 The *3. ApiLogicProject_Logic* application is a clone of the prior example, customized in VSCode:
 
-* **API:** additional endpoints are defined in ```ApiLogicProject_Logic/api/customize_api.py```
+* **API:** additional endpoints are defined in [```3. ApiLogicProject_Logic/api/customize_api.py```](3.%20ApiLogicProject_Logic/api/customize_api.py)
 
 * **Logic:** the project now implements logic and security
 
@@ -177,21 +177,38 @@ You can run the app.
 1. **Stop the server** using the red "stop" button).
 2. **Restart the server** with the same procedure as Step 2, above, but choose Run Configuration ***3. API Logic Project: Logic***.  
 
-Observe the customizations in `3. ApiLogicProject_Logic`:
+<details markdown>
+
+<summary>Remind me how</summary>
+
+1. Restart the Server:
+
+    1. Click **Run and Debug**
+    2. Use the dropdown to select **3. API Logic Project: Logic**, and
+    3. Click the green button to start the server
+<br><br>
+
+2. Start the Browser at localhost:5656, using the **url shown in the console log**
+
+</details>
+
+&nbsp;
+
+Observe the customizations in [```3. ApiLogicProject_Logic```](3.%20ApiLogicProject_Logic/)
 
 1. Click Category - you need to **login** now (user u1, password p).  That's because authentication has been activated.
 
-2. Categories has fewer rows per **multi-tenant Grant logic** in ```ApiLogicProject_Logic/security/declare_security.py```
+2. Categories has fewer rows per **multi-tenant Grant logic** in [```3. ApiLogicProject_Logic/security/declare_security.py```](3.%20ApiLogicProject_Logic/security/declare_security.py)
 
-3. The app now shows **help text** to introduce its features per updates in ```ApiLogicProject/ui/admin/admin.yaml```
+3. The app now shows **help text** to introduce its features per updates in [```3. ApiLogicProject_Logic/ui/admin/admin.yaml```](3.%20ApiLogicProject_Logic/ui/admin/admin.yaml)
 
-4. Our Delete Order test adjusts the customer balance, since we how have **business logic** in ```ApiLogicProject_Logic/logic/declare_logic.py```
+4. Our Delete Order test adjusts the customer balance, since we how have **business logic** in [```3. ApiLogicProject_Logic/logic/declare_logic.py```](3.%20ApiLogicProject_Logic/logic/declare_logic.py)
 
 5. You can explore the Swagger via *item 2 on the Home* page
 
-    * You will need to authenticate as explained in the [project documentation](https://apilogicserver.github.io/Docs/Security-Overview/)
+    * You will need to authenticate as explained in the [project documentation](https://apilogicserver.github.io/Docs/Security-Swagger/)
 
-    * You can try the customized API with the custom service using *CategoriesEndPoint/get_cats,* authenticated as *u1*.  See  ```ApiLogicProject_Logic/api/customize_api.py```
+    * You can try the customized API with the custom service using *CategoriesEndPoint/get_cats,* authenticated as *u1*.  See  [```3. ApiLogicProject_Logic/api/customize_api.py```](3.%20ApiLogicProject_Logic/api/customize_api.py)
 
 You can use VSCode to *diff* these from their originals in the `2. ApiLogicProject`.
 
@@ -201,9 +218,12 @@ You can use VSCode to *diff* these from their originals in the `2. ApiLogicProje
 
 
 </details>
+
 &nbsp;
 
 <details markdown>
+
+&nbsp;
 
 &nbsp;
 
@@ -212,7 +232,7 @@ You can use VSCode to *diff* these from their originals in the `2. ApiLogicProje
 Use the [```Detailed Tutorial```](3.%20ApiLogicProject_Logic/Tutorial.md) to further explore this app.
 
 
-As shown above, it's easy to create projects with a single command.  To help you explore, ApiLogicServer provides several prepackaged sqlite databases.  For example, create a project for this 1 table database:
+As shown above, it's easy to create projects with a single command.  To help you explore, ApiLogicServer provides several pre-installed sqlite databases.  For example, create a project for this 1 table database:
 
 ```bash
 cd /workspaces/app_fiddle
@@ -229,6 +249,43 @@ Launch configurations have been pre-created, then re-execute the Admin app as ab
 
 > Next, try it on your own databases: if you have a database, you can have an API and an Admin app in minutes.
 
+&nbsp;
+
+<details markdown>
+
+<summary> Providing the db_url for your own database </summary>
+
+&nbsp;
+
+The system provides shorthand notations for the pre-installed sample databases above.  For your own databases, you will need to provide a SQLAlchemy URI for the `db_url` parameter.  These can be tricky - try `ApiLogicServer examples`, or, when all else fails, [try the docs](https://apilogicserver.github.io/Docs/Database-Connectivity/).
+
+</details>
+
+
+</details>
+
+&nbsp;
+
+<details markdown>
+
+<summary> Notes </summary>
+
+
+
+
+Please find additional notes below.
+
+<details markdown>
+
+<summary> Project Structure </summary>
+
+&nbsp;
+
+This tutorial is actually 3 independent projects.  When you create a project using `ApiLogicServer create --project_name=my_project`, the system will create a free-standing project.  The project will include your container settings, IDE settings etc, so you can just open it your IDE to run and debug.
+
+</details>
+
+
 </details>
 
 &nbsp;
@@ -244,7 +301,7 @@ Launch configurations have been pre-created, then re-execute the Admin app as ab
 
 | Tech Area | Skill | Basic App Example | APILogicProject Logic Example | Notes   |
 |:---- |:------|:-----------|:--------|:--------|
-| __Flask__ | Setup | [```flask_basic.py```](1.%20Basic_App/flask_basic.py) |  [```api_logic_server_run.py```](3. ApiLogicProject_Logic/api_logic_server_run.py) |  |
+| __Flask__ | Setup | [```flask_basic.py```](1.%20Basic_App/flask_basic.py) |  [```api_logic_server_run.py```](3.%20ApiLogicProject_Logic/api_logic_server_run.py) |  |
 |  | Events | |  [```ui/admin/admin_loader.py```](3.%20ApiLogicProject_Logic/ui/admin/admin_loader.py) |  |
 | __API__ | Create End Point | [```api/end_points.py```](Basic_App/api/end_points.py) | [```api/customize_api.py```](3.%20ApiLogicProject_Logic/api/customize_api.py) |  see `def order():` |
 |  | Call endpoint |  | [```test/.../place_order.py```](3.%20ApiLogicProject_Logic/test/api_logic_server_behave/features/steps/place_order.py) | |
