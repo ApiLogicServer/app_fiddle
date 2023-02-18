@@ -161,7 +161,7 @@ A unique feature of API Logic Server is provision for:
   * Remarkable agility with automatic dependency management - 40x more concise than code
   * Simplify maintenance with automatic ordering
   * Improve quality through automatic reuse and partitioning
-  * Faciliate collaboration since business users can read them
+  * Facilitate collaboration since business users can read them
 
 
 * Rules are **declared in *your IDE,*** with full support for code completion, logging, and debugging.
@@ -204,7 +204,7 @@ Observe the customizations in [```3. ApiLogicProject_Logic```](3.%20ApiLogicProj
 
 3. The app now shows **help text** to introduce its features per updates in [```3. ApiLogicProject_Logic/ui/admin/admin.yaml```](3.%20ApiLogicProject_Logic/ui/admin/admin.yaml)
 
-4. Our Delete Order test adjusts the customer balance, since we how have **business logic** in [```3. ApiLogicProject_Logic/logic/declare_logic.py```](3.%20ApiLogicProject_Logic/logic/declare_logic.py)
+4. Our Delete Order test adjusts the customer balance, since we how have **business logic** in [```3. ApiLogicProject_Logic/logic/declare_logic.py```](3.%20ApiLogicProject_Logic/logic/declare_logic.py) :trophy:
 
 5. You can explore the Swagger via *item 2 on the Home* page
 
