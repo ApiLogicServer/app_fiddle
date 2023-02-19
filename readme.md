@@ -26,6 +26,7 @@ The Key Technology Concepts (at end) is an inventory of essential skills for cre
 
 &nbsp;
 
+
 <summary>1. Basic App: Manually Coded -- Learn Flask / SQLAlchemy - Fully customizable, but slow</summary>
 
 This illustrates a typical framework-based approach for creating projects - a minimal project for seeing core Flask and SQLAlchemy services in action.
@@ -50,6 +51,8 @@ To run the basic app:
 
 </details>
 
+&nbsp;
+
 Frameworks are flexible, and leverage your existing dev environment (IDE, git, etc).  But the manual effort is time-consuming, and complex.  This minimal project **does not provide:**
 
 * an API endpoint for each table
@@ -58,12 +61,12 @@ Frameworks are flexible, and leverage your existing dev environment (IDE, git, e
 
 * any security, or business logic (multi-table derivations and constraints).
 
+The next section illustrates an approach that creates executable projects instantly, including support for an API, an Admin App, and logic / security.
+
 
 </details>
 
 &nbsp;
-
-</details>
 
 
 <details markdown>
