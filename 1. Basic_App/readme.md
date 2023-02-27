@@ -79,3 +79,21 @@ There are 2 aspects to explore for SQLAlchemy:
 * See [```database/models.py```](../1.%20Basic_App/database/models.py) for examples of defining objects (models) for database rows.  These correspond to the tables in your database.
 
 * See [```api/end_points.py```](../1.%20Basic_App/api/end_points.py) for examples of SQLAlchemy calls.  See `def order():`.
+
+&nbsp;
+
+## Appendix
+
+&nbsp;
+
+### API
+
+An API is a set of endpoints, accessible via the web, that clients (e.g, mobile apps) can invoke by providing:
+
+* **a command:** such as GET, POST or PATCH
+
+* **a URL:** this identifies the server, the endpoint (e.g, Order), and the arguments (e.g. the OrderNumber)
+
+* **a payload:** data being sent to the server (e.g, to be saved), typically in `json` format (not provided for GET commands)
+
+* **a header:** typically identifying the authenticated user
