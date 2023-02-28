@@ -59,11 +59,15 @@ Frameworks are flexible, and leverage your existing dev environment (IDE, git, e
 
 * an API endpoint for each table
 
+      * We saw above it's straightforward to provide a *single endpoint.*  It's quite another matter -- *weeks to months* -- to provide endpoints for **all** the tables, with pagination, filtering, and related data access.  That's a horse of an entirely different feather.<br><br>
+
 * a User Interface
 
 * any security, or business logic (multi-table derivations and constraints).
 
-The next section illustrates an approach that creates executable projects instantly, including support for an API, an Admin App, and logic / security.
+Instead of frameworks, we might consider a Low Code approach.  Low Code tools provide excellent custom user interfaces.  However, these often require extensive screen painting, and typically require a proprietary IDE.
+
+The next section introduces an approach that is as flexible as a framework, but faster than Low Code for APIs and Admin Apps.
 
 
 </details>
@@ -77,15 +81,11 @@ The next section illustrates an approach that creates executable projects instan
 
 <br>
 
-Instead of frameworks, we might consider a Low Code approach.  Low Code tools provide excellent custom user interfaces.  However, these often require extensive screen painting, and typically require a proprietary IDE.
-
 The *2. ApiLogicProject* app provides an alternative, creating an entire project by reading your schema.  This automated approach is:
 
 * **Instant:** faster than Low Code screen painting, with instant APIs and Admin User Interfaces:
 
   * **API:** an endpoint for each table, with filtering, sorting, pagination and related data access.  Swagger is automatic.
-
-      * We saw above it's straightforward to provide a *single endpoint.*  It's quite another matter -- *weeks to months* -- to provide endpoints for **all** the tables, that include all the services noted above.  That's a horse of an entirely different feather.<br><br>
 
   * **Admin UI:** multi-page / multi-table apps, with page navigations, automatic joins and declarative hide/show.  It executes a yaml file, so basic customizations do not require HTML or JavaScript background.
 
@@ -151,7 +151,7 @@ Let's see how these are addressed, in the next section.
 
 <details markdown>
 
-<summary>3. Api Logic Project Logic: Unique Spreadsheet-like Rules -- 40X More Concise</summary>
+<summary>3. Api Logic Project Logic: Customized (code and unique spreadsheet-like Rules -- 40X More Concise)</summary>
 
 <br>
 
