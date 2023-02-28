@@ -59,7 +59,7 @@ Frameworks are flexible, and leverage your existing dev environment (IDE, git, e
 
 * an API endpoint for each table
 
-      * We saw above it's straightforward to provide a *single endpoint.*  It's quite another matter -- *weeks to months* -- to provide endpoints for **all** the tables, with pagination, filtering, and related data access.  That's a horse of an entirely different feather.<br><br>
+    * We saw above it's straightforward to provide a *single endpoint.*  It's quite another matter -- *weeks to months* -- to provide endpoints for **all** the tables, with pagination, filtering, and related data access.  That's a horse of an entirely different feather.<br><br>
 
 * a User Interface
 
