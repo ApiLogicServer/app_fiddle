@@ -47,7 +47,8 @@ To run the basic app:
 
 3. When you have reviewed the result ([here's the readme](./1.%20Basic_App/readme.md)), **stop** the server
 
-<figure><img src="https://github.com/ApiLogicServer/Docs/blob/main/docs/images/tutorial/1-basic-app-tutorial.png?raw=true"></figure>
+![](https://github.com/ApiLogicServer/Docs/blob/main/docs/images/tutorial/1-basic-app-tutorial.png?raw=true)
+
 
 </details>
 
@@ -56,7 +57,7 @@ To run the basic app:
 
 <details markdown>
 
-<summary>&nbsp;&nbsp;&nbsp;--> Fully Customizable, but slow</summary>
+<summary>&nbsp;&nbsp;&nbsp;--> Fully Customizable, but Faster Would Be Better</summary>
 
 &nbsp;
 
@@ -93,7 +94,7 @@ The *2. ApiLogicProject* app illustrates an alternative, creating an entire proj
 
   * **API:** an endpoint for each table, with filtering, sorting, pagination and related data access.  Swagger is automatic.
 
-  * **Admin UI:** multi-page / multi-table apps, with page navigations, automatic joins and declarative hide/show.  It executes a yaml file, so basic customizations do not require HTML or JavaScript background.
+  * **Admin UI:** multi-page / multi-table apps, with page navigations, automatic joins and declarative hide/show.  It executes a yaml (model) file, so basic customizations do not require HTML or JavaScript background.
 
       * Custom UIs can be built using your tool of choice (React, Angular, etc), using the API<br><br>
 
@@ -119,28 +120,40 @@ To execute (see *Show me how*, below, for details): **restart the server** with 
 
 &nbsp;
 
-To run the ApiLogicProject app, **stop the running server** (see figure above), and
-
-1. Restart the Server:
-
-    1. Click **Run and Debug**
-    2. Use the dropdown to select **2. API Logic Server: Instant, Open**, and
-    3. Click the green button to start the server
-<br><br>
-
-2. Start the Browser at localhost:5656, using the **url shown in the console log**
-
-You can explore key aspects of this app in the [1. Basic_app/readme.md](./1.%20Basic_App/readme.md).
-
-Don't spend too much time exploring the app, we'll see a much better version in just a moment...
-
-<figure><img src="https://github.com/ApiLogicServer/Docs/blob/main/docs/images/tutorial/2-apilogicproject-tutorial.png?raw=true"></figure>
-
 </details>
 
 &nbsp;
 
 > Key Takeway: you will achieve this level automation for your projects: provide a database, get an instant API and Admin App.  Then, customize in your IDE. 
+
+&nbsp;
+
+<details markdown>
+
+<summary>&nbsp;&nbsp;&nbsp;What is API Logic Server </summary>
+
+&nbsp;
+
+API Logic server installs with `pip`, in a docker container, or in codespaces.  As shown below, it consists of a:
+
+* **CLI:** the `ApiLogicServer create` command you saw above
+* **Runtime Packages:** for API, UI and Logic execution
+
+![](https://apilogicserver.github.io/Docs/images/Architecture-What-Is.png)
+
+&nbsp;
+
+It operates as shown below:
+
+* Reads your database to create an executable API Logic Project; customize and debug it in VSCode, PyCharm, etc.
+* The executing server is a standard horizontally scalable Flask project, using SQLAlchemy for database access.  
+
+![](https://apilogicserver.github.io/Docs/images/creates-and-runs.png)
+
+For production deployment, the project includes a dockerfile to containerize it to DockerHub.
+
+</details>
+
 
 &nbsp;
 
@@ -201,7 +214,7 @@ Customizations are illustrated in the project [`3. ApiLogicProject_Logic`](3.%20
 
 2. Start the Browser at localhost:5656, using the **url shown in the console log**
 
-<figure><img src="https://github.com/ApiLogicServer/Docs/blob/main/docs/images/tutorial/2-apilogicproject-tutorial.png?raw=true"></figure>
+![](https://apilogicserver.github.io/Docs/images/tutorial/2-apilogicproject-tutorial.png)
 
 </details>
 
@@ -216,16 +229,18 @@ This project is the customized version of _2. ApiLogicProject_, above.  The tabl
 </p>
 <p align="center">
   Explore customizations in project: <i>3. ApiLogicProject_Logic</i><br>
-  Click Explore Code to see the code.
+  Click Explore Code to see the code.<br>
+  <b>TL;DR - scan code marked by <--</b>
 </p>
 
 | Customization Area           | Try It                                                                                                                                                                                            | Click to Explore Code                                                                                  | Notes                |
 |:-----------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:---------------------|
+| **New API endpoint <--**         | Use Swagger for endpoint: *CategoriesEndPoint/get_cats*<br><br>See [docs](https://apilogicserver.github.io/Docs/Security-Swagger/) - authenticate as **u1**  | [```api/customize_api.py```](3.%20ApiLogicProject_Logic/api/customize_api.py)                 | Standard Flask/SQLAlchemy  |
+| **Multi-table Update Logic <--** | Delete Order now adjusts the customer balance                                                                                                                                                    | [```logic/declare_logic.py```](3.%20ApiLogicProject_Logic/logic/declare_logic.py)             |  Spreadsheet-like logic                    |                                                                
+| **Admin App <--**  | Observe **help text** describes features                                                                                                                                                 | [```ui/admin/admin.yaml```](3.%20ApiLogicProject_Logic/ui/admin/admin.yaml)                  | Not complex JS, HTML                     |
 | **Login Authentication**     | Click Category - observe you need to **login** now (user u1, password p)                                                                                                                                  | [```config.py```](3.%20ApiLogicProject_Logic/config.py)                                       | See SECURITY_ENABLED |
 | **Role-Based Authorization** | Observe categories has **fewer rows**                                                                                                                                                                         | [```security/declare_security.py```](3.%20ApiLogicProject_Logic/security/declare_security.py) |                      |
-| **Admin App**                | Observe **help text** describes features                                                                                                                                                 | [```ui/admin/admin.yaml```](3.%20ApiLogicProject_Logic/ui/admin/admin.yaml)                  | Not complex JS, HTML                     |
-| **Multi-table Update Logic** | Delete Order now adjusts the customer balance                                                                                                                                                    | [```logic/declare_logic.py```](3.%20ApiLogicProject_Logic/logic/declare_logic.py)             |  Spreadsheet-like logic                    |                                                                
-| **New API endpoint**         | Use Swagger for endpoint: *CategoriesEndPoint/get_cats*<br><br>See [docs](https://apilogicserver.github.io/Docs/Security-Swagger/) - authenticate as **u1**  | [```api/customize_api.py```](3.%20ApiLogicProject_Logic/api/customize_api.py)                 | Standard Flask/SQLAlchemy  |
+
 
 &nbsp;
 
@@ -233,7 +248,9 @@ This project is the customized version of _2. ApiLogicProject_, above.  The tabl
 
 &nbsp;
 
-Use the [```Detailed Tutorial```](3.%20ApiLogicProject_Logic/Tutorial.md) to further explore this app.
+Use the [```Detailed Tutorial```](3.%20ApiLogicProject_Logic/Tutorial.md) to further explore this app.  
+
+> **TL;DR  Scan the code marked with <-- in the table above.**
 
 </details>
 
